@@ -1,7 +1,8 @@
 #page-auth {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	height: 100vh;
+
 	aside {
 		flex: 7;
 		background: #835afd;
@@ -53,24 +54,43 @@
 			align-self: center;
 		}
 
+		h2 {
+			font-size: 24px;
+			margin: 64px 0 24px;
+			font-family: "Poppins", sans-serif;
+		}
+
 		form {
 			input {
 				height: 50px;
 				border-radius: 8px;
 				padding: 0 16px;
-				background: #ffffff;
+				background: #fff;
 				border: 1px solid #a8a8b3;
 			}
+
 			button {
 				margin-top: 16px;
 			}
+
 			button,
 			input {
 				width: 100%;
 			}
 		}
+
+		p {
+			font-size: 14px;
+			color: #737380;
+			margin-top: 16px;
+
+			a {
+				color: #e559f9;
+			}
+		}
 	}
 }
+
 .create-room {
 	margin-top: 64px;
 	height: 50px;
@@ -96,6 +116,7 @@
 		filter: brightness(0.9);
 	}
 }
+
 .separator {
 	font-size: 14px;
 	color: #a8a8b3;
@@ -111,6 +132,7 @@
 		background: #a8a8b3;
 		margin-right: 16px;
 	}
+
 	&::after {
 		content: "";
 		flex: 1;
