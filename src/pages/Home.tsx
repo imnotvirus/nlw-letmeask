@@ -9,6 +9,7 @@ import { Button } from "../components/Button";
 import { useAuth } from "../hooks/Auth";
 import { FormEvent, useState } from "react";
 import { database } from "../services/firebase";
+import toast from "react-hot-toast";
 export function Home() {
 	const history = useHistory();
 	const { user, signInWithGoogle } = useAuth();
@@ -28,7 +29,7 @@ export function Home() {
 		const roomRef = await database.ref(`/rooms/${roomCode}`).get();
 
 		if (!roomRef.exists()) {
-			alert("Essa sala não existe!");
+			toast.error("Essa sala não existe!");
 			return;
 		}
 		history.push(`/rooms/${roomCode}`);
