@@ -4,6 +4,9 @@
 	height: 100vh;
 
 	aside {
+		@media (max-width: 768px) {
+			display: none;
+		}
 		flex: 7;
 		background: #835afd;
 		color: #fff;
@@ -141,3 +144,4 @@
 		margin-left: 16px;
 	}
 }
+@max;
